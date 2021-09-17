@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <title>Tourism</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><b>iExplore</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Book Hotels</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Holiday Types
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Adventure</a></li>
+                            <li><a class="dropdown-item" href="#">Cultural Holiday</a></li>
+                            <li><a class="dropdown-item" href="#">Safari Holiday</a></li>
+                            <li><a class="dropdown-item" href="#">wild Holiday</a></li>
+                            <li><a class="dropdown-item" href="#">Luxary Holiday</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Family Holiday</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Destinations
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Kashmir</a></li>
+                            <li><a class="dropdown-item" href="#">Agra</a></li>
+                            <li><a class="dropdown-item" href="#">Lucknow</a></li>
+                            <li><a class="dropdown-item" href="#">Delhi</a></li>
+                            <li><a class="dropdown-item" href="#">Mumbai</a></li>
+                            <li><a class="dropdown-item" href="#">Goa</a></li>
+                            <li><a class="dropdown-item" href="#">Leh & Laddhak</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search Places, Hotels..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="mx-2">                    
+                    <button class="btn btn-outline-light mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                  <button class="btn btn-outline-light btn-md" data-bs-toggle="modal" data-bs-target="#signupModal">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- loginModal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login to iExplore</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- signModal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign-up to iExplore</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check it out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Create Account</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Crousel------>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="img-fluid"src="https://source.unsplash.com/1400x600/?nature,water" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>WELCOME TO iEXPLORE</h1>
+              <p>Fullfilled Your Dreams Our Cheapest Packages</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img-fluid" class="img-fluid" src="https://source.unsplash.com/1400x600/?nature,hill" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Roaming Anywhere</h1>
+              <p>Welcome to the Cheapest Packages</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img  class="img-fluid"  src="https://source.unsplash.com/1400x600/?nature,forest" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Time Spent With Nature</h1>
+              <p>Explore The World with Us</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h2 class="text-center my-4"><i>Inspire your travels</i></h2>
+
+      <div class="container text-center ">
+      Browse our latest inspiration pages to start planning your next adventure.<br/>
+       We arrange trips to more than 80 destinations throughout the world and across each continent
+      </div>
+      <nav aria-label="breadcrumb" class="my-4 mx-2 bg-warning">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Hotels</a></li>
+            <li class="breadcrumb-item"><a href="#">Luxary Rooms</a></li>
+            <li class="breadcrumb-item"><a href="#">Packages</a></li><span class="badge bg-danger">New</span>
+        </ol>
+    </nav>
+
+      <div class="container my-4">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary">Please have a look over Pink city</strong>
+                  <h3 class="mb-0">Rajasthan</h3>
+                  <div class="mb-1 text-muted">Nov 12</div>
+                  <p class="card-text mb-auto"> Pink City, the capital of the royal state of Rajasthan, was ruled by the Rajputs for many centuries and developed as a planned city in the 17th...</p>
+                  <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                 <img class="bd-placeholder-img img-fluid" width="200" height="250" src="jaipur1.jpeg">
+        
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-success">Dream destination of Bachelors</strong>
+                  <h3 class="mb-0">Goa</h3>
+                  <div class="mb-1 text-muted">Nov 11</div>
+                  <p class="mb-auto">Lying on the western coast, Goa is India's smallest state and unlike any other, known for its endless beaches, stellar nightlife...</p>
+                  <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                 <img class="bd-placeholder-img img-fluid" width="200" height="250" src="goa.jpeg">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary">Some says Heaven on earth</strong>
+                  <h3 class="mb-0">Jammu & Kashmir</h3>
+                  <div class="mb-1 text-muted">Nov 12</div>
+                  <p class="card-text mb-auto"> Create romantic memories in idyllic Gulmarg, walk hand in hand by Srinagar’s Dal Lake etc. Book holiday packages...</p>
+                  <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                 <img class="bd-placeholder-img img-fluid" width="200" height="250" src="kashmir.jpeg">
+        
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-success">Symbol of love TajMahal</strong>
+                  <h3 class="mb-0">Agra</h3>
+                  <div class="mb-1 text-muted">Nov 11</div>
+                  <p class="mb-auto">The glorious city of Agra is one of the most-visited tourist destinations in India, it is home to the popular Taj Mahal....</p>
+                  <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                 <img class="img-fluid"class="bd-placeholder-img " width="200" height="250" src="agra.jpeg">
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="container text-center mt-4">
+      <h2 class="text-center my-4"><i>Holiday ideas to match your interests</i></h2>
+      Whether you want to stay in simple or luxurious accommodation, have a particular passion for <br/>
+      wildlife, art or experiencing the great outdoors, or you're planning a trip for a special occasion, we <br/>
+      can create an itinerary to match your interests and tastes.</div>
+
+      <div class="row mt-4 mx-4 ">
+        <div class="col-4">
+            <div class="card ">
+                <img src="https://source.unsplash.com/1600x900/?nature,safari" class="card-img-top">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-9">
+                            <h4>Safari Holiday<h4>
+                        </div>
+                        <div class="col-3 text-end">
+                            <span class="badge bg-success">4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <img src="https://source.unsplash.com/1600x900/?nature,beach" class="card-img-top">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-9">
+                            <h4>Beach Holiday</h4>
+                        </div>
+                        <div class="col-3 text-end">
+                            <span class="badge bg-success">4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <img src="https://source.unsplash.com/1600x900/?nature,family" class="card-img-top">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-9">
+                            <h4>Family holiday</h4>
+                        </div>
+                        <div class="col-3 text-end">
+                            <span class="badge bg-success">4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-4 mt-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img class="img-fluid border rounded-2" src="https://source.unsplash.com/1600x900/?railway">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img class="img-fluid border rounded-2" src="https://source.unsplash.com/1600x900/?animals">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img class="img-fluid border rounded-2" src="https://source.unsplash.com/1600x900/?mountain">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img class="img-fluid borde rrounded-2" src="https://source.unsplash.com/1600x900/?hills">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img class="img-fluid border rounded-2" src="https://source.unsplash.com/1600x900/?desert">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img class="img-fluid border rounded-2" src="https://source.unsplash.com/1600x900/?market">
+      </div>
+  </div>
+
+      <footer class="blog-footer text-center bg-primary mt-4">
+        <p style="padding-top: 40px;">Registered Office: iExplore Travel Group Limited, New Mill Lane, Washington, O8999 9S
+            </p>
+            <h6> © 2021 iExplore Travel  | Designed By Suhail</h6>
+        <p>
+          <a href="#"><u style="color: rgb(41, 54, 238);">Back to top</u></a>
+        </p><br/>
+      </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
